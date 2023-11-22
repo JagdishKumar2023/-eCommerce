@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="left">
+          <h1><a href="./index.html">vastralaya</a></h1>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="./login.html">login/signup</a></li>
+            <li><a href="">cart</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="loginBody">
+        <div class="login-container">
+          <form class="login-form">
+            <h2>login</h2>
+            <div class="input-group">
+              <input
+                type="email"
+                id="email"
+                name="username"
+                value=""
+                required
+              />
+              <label for="username">username</label>
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value=""
+                required
+              />
+              <label for="password">password</label>
+            </div>
+            <button type="submit" class="login">login</button>
+            <p>
+              don't have an account ?
+              <span class="signup"><a href="./signup.html">signup</a></span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,56 +1,67 @@
-let handleSignup = (event) => {
-  event.preventDefault();
+// setting focus to name field as soon as page load
 
-  let userSignupData = JSON.parse(localStorage.getItem("userSignupData")) || [];
+let nameInput = document.getElementById("name");
+nameInput.focus();
+
+let signUpForm = document.querySelector(".signup-form");
+
+let handleSignup = (e) => {
+  e.preventDefault();
+
+  let signUpDB = JSON.parse(localStorage.getItem("userData")) || [];
 
   let nameInput = document.getElementById("name");
   let nameValue = nameInput.value;
 
-  let telInput = document.getElementById("tel");
-  let telValue = telInput.value;
-
   let emailInput = document.getElementById("email");
   let emailValue = emailInput.value;
+
+  let phoneInput = document.getElementById("tel");
+  let phoneValue = phoneInput.value;
 
   let passInput = document.getElementById("password");
   let passValue = passInput.value;
 
-  let confirmPassInput = document.getElementById("confirmPassInput");
-  let confirmPassValue = confirmPassInput.value;
+  let cnfmPassInput = document.getElementById("confirmPassword");
+  let confPassValue = cnfmPassInput.value;
 
   let signUpData = {
     name: nameValue,
-    phone: telValue,
     email: emailValue,
+    phone: phoneValue,
     password: passValue,
   };
 
-  if (
-    !nameValue ||
-    !telValue ||
-    !emailValue ||
-    !passValue ||
-    !confirmPassValue
-  ) {
-    alert(`Please fill the required fields`);
-  } else if (passValue !== confirmPassValue) {
-    alert(`Password and confirm password does not match`);
-  } else {
-    userSignupData.push(signUpData);
-    localStorage.setItem("userSignupData", JSON.stringify(userSignupData));
+  // let checkedData = signUpDB.some((ele) => {
+  //   if (ele.email === emailValue || ele.phone === phoneValue) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // });
 
-    alert("signed up successfully");
+  let checkedData = signUpDB.some(
+    (ele) => ele.email === emailValue || ele.phone === phoneValue
+  );
+
+  if (passValue !== confPassValue) {
+    alert("password and confirm password do not match.");
+    cnfmPassInput.focus();
+  } else if (checkedData) {
+    alert("email or phone number already exists.");
+  } else {
+    signUpDB.push(signUpData);
+
+    localStorage.setItem("userData", JSON.stringify(signUpDB));
+    alert("signed up successfully.");
     nameInput.value = "";
-    telInput.value = "";
     emailInput.value = "";
+    phoneInput.value = "";
     passInput.value = "";
-    confirmPassInput.value = "";
+    cnfmPassInput.value = "";
 
     nameInput.focus();
   }
-
-  //   console.log(userSignupData);
 };
 
-let signup_form = document.getElementById("handleSignup");
-signup_form.addEventListener("submit", handleSignup);
+signUpForm.addEventListener("submit", handleSignup);

@@ -16,34 +16,61 @@
         <div class="right">
           <ul>
             <li><a href="./login.html">login/signup</a></li>
-            <li><a href="">cart</a></li>
+            <li><a href="./cart.html">cart</a></li>
           </ul>
         </div>
       </div>
-      <div class="sign_up_form">
-        <form id="handleSignup">
-          <input type="text" placeholder="enter your name" id="name" value="" />
-          <input type="tel" placeholder="enter your number" id="tel" value="" />
-          <input
-            type="email"
-            placeholder="enter your email id"
-            id="email"
-            value=""
-          />
-          <input
-            type="password"
-            placeholder="enter password"
-            id="password"
-            value=""
-          />
-          <input
-            type="password"
-            placeholder="confirm Password"
-            id="confirmPassInput"
-            value=""
-          />
-          <button type="submit" class="submitBtn">signup</button>
-        </form>
+      <div class="signupBody">
+        <div class="signup-container">
+          <form class="signup-form">
+            <h2>sign up</h2>
+            <div class="input-group">
+              <input type="text" id="name" name="name" value="" required />
+              <label for="name">name</label>
+            </div>
+            <div class="input-group">
+              <input
+                type="email"
+                id="email"
+                name="username"
+                value=""
+                required
+              />
+              <label for="username">email</label>
+            </div>
+            <div class="input-group">
+              <input type="tel" id="tel" name="tel" value="" required />
+              <label for="username">phone</label>
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value=""
+                required
+              />
+              <label for="password">password</label>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="password"
+                id="confirmPassword"
+                name="password"
+                value=""
+                required
+              />
+              <label for="password">confirm password</label>
+            </div>
+
+            <button type="submit" class="singup">sign up</button>
+            <p>
+              already have an account ?
+              <span class="signup"><a href="./login.html">login</a></span>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   </body>

@@ -74,3 +74,17 @@ a {
   background-color: #ff3e6c;
   color: aqua;
 }
+
+/* media queries */
+
+@media only screen and (max-width: 767px) {
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

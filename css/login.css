@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  text-transform: capitalize;
 }
 
 a {
@@ -19,6 +18,7 @@ p {
   /* border: 1px solid burlywood; */
   color: #b3007a;
   font-size: bolder;
+  text-decoration: underline;
 }
 
 .signup :hover {
@@ -48,17 +48,20 @@ p {
   margin-bottom: 30px;
   text-align: center;
   color: #333;
+  text-transform: capitalize;
 }
 
 .login {
   font-family: sans-serif;
   font-size: 18px;
   padding: 10px;
+  text-transform: capitalize;
 }
 
 .input-group {
   position: relative;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 .input-group input {

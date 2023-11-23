@@ -1,4 +1,5 @@
 let data = [
+  // t-shirt
   {
     id: 1,
     product: "Jockey t-shirt",
@@ -44,6 +45,7 @@ let data = [
     price: "499",
     count: 0,
   },
+  // jeans
   {
     id: 6,
     product: "Baggy",
@@ -80,6 +82,7 @@ let data = [
     price: "4000",
     count: 0,
   },
+  // watch
   {
     id: 10,
     product: "titan black",
@@ -119,7 +122,7 @@ let data = [
   {
     id: 14,
     product: "boat",
-    type: "watch",
+    type: "smart watch",
     color: "orange and white",
     img: "./images/smart-watch-2023.webp",
     price: "11990",
@@ -177,6 +180,42 @@ let data = [
     color: "white",
     img: "./images/most-expensive-sneakers.avif",
     price: "40000",
+    count: 0,
+  },
+  {
+    id: 21,
+    product: "cool water",
+    type: "perfume",
+    color: "pink",
+    img: "./images/cool-water.jpg",
+    price: "1499",
+    count: 0,
+  },
+  {
+    id: 22,
+    product: "zara",
+    type: "perfume",
+    color: "perpal",
+    img: "./images/zara-perfumes.jpg",
+    price: "899",
+    count: 0,
+  },
+  {
+    id: 23,
+    product: "luxury perfume",
+    type: "perfume",
+    color: "light orange",
+    img: "./images/luxury-perfumes.jpg",
+    price: "2999",
+    count: 0,
+  },
+  {
+    id: 24,
+    product: "perfume",
+    type: "aranyam",
+    color: "mix color",
+    img: "./images/perfume-for-men.webp",
+    price: "1399",
     count: 0,
   },
 ];

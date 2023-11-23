@@ -18,6 +18,11 @@ a {
   background-color: #ff3e6c;
 }
 
+.left,
+.right {
+  text-transform: capitalize;
+}
+
 ul {
   display: flex;
   list-style: none;

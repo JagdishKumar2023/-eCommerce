@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.sign_up_form {
+  border: 1px solid red;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#handleSignup {
+  border: 1px solid rgb(23, 128, 0);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  border-radius: 10px;
+  padding: 10px;
+}

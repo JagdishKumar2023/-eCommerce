@@ -30,6 +30,7 @@ let handleSignup = (e) => {
     email: emailValue,
     phone: phoneValue,
     password: passValue,
+    isLoggedIn: false,
   };
 
   // let checkedData = signUpDB.some((ele) => {
@@ -53,14 +54,16 @@ let handleSignup = (e) => {
     signUpDB.push(signUpData);
 
     localStorage.setItem("userData", JSON.stringify(signUpDB));
-    alert("signed up successfully.");
+
     nameInput.value = "";
     emailInput.value = "";
     phoneInput.value = "";
     passInput.value = "";
     cnfmPassInput.value = "";
 
-    nameInput.focus();
+    alert("signed up successfully.");
+
+    window.location.href = "./login.html";
   }
 };
 
